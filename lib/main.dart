@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.cyan),
+      theme: ThemeData(primarySwatch: Colors.purple),
       home: MyHome(),
 
 
@@ -28,6 +28,7 @@ class MyHome extends StatelessWidget {
       appBar: AppBar(
         title: Text('Assignment2'),
       ),
+      drawer: Drawer(),
     );
   }
 }
