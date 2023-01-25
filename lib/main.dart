@@ -29,6 +29,17 @@ class MyHome extends StatelessWidget {
         title: Text('Assignment2'),
       ),
       drawer: Drawer(),
+      body: Center(
+        child: Column(
+          children: [
+            Container(
+              child: ElevatedButton(
+                onPressed: () {  },
+                child: Text('Show Alert'),),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
