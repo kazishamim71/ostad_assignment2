@@ -31,11 +31,33 @@ class MyHome extends StatelessWidget {
       drawer: Drawer(),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               child: ElevatedButton(
-                onPressed: () {  },
-                child: Text('Show Alert'),),
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: const Text("Alert Dialog Box"),
+                      content: const Text("You have raised a Alert Dialog Box"),
+                      actions: <Widget>[
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: Container(
+                            color: Colors.green,
+                            padding: const EdgeInsets.all(14),
+                            child: const Text("okay"),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+                child: const Text("Show alert Dialog box"),
+              ),
             )
           ],
         ),
